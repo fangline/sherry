@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherry | 美學個人履歷</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-fixed-glow"></div>
+
+    <!-- 頂部導覽 -->
+    <nav class="fixed w-full z-[100] px-8 md:px-16 py-8 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+        <div class="text-2xl font-black serif-font tracking-tighter">SHERRY<span class="text-yellow-400">.</span></div>
+        <div class="hidden md:flex gap-10 text-[10px] uppercase font-bold tracking-widest text-white/50">
+            <a href="#banner" class="hover:text-white transition">SHERRY 形象</a>
+            <a href="#timeline" class="hover:text-white transition">職涯演進</a>
+            <a href="#portfolio" class="hover:text-white transition">精選作品</a>
+            <a href="#future" class="hover:text-white transition">未來展望</a>
+        </div>
+    </nav>
+
+    <!-- 主頁面容器 -->
+    <div id="mainContent">
+        <!-- 1. Banner 區塊 -->
+        <section id="banner" class="section-hero">
+            <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=1920" class="hero-img" alt="[Emily 個人形象大圖]">
+            <div class="hero-overlay"></div>
+            <div class="hero-text" data-aos="fade-up">
+                <p class="text-yellow-400 text-xs font-bold tracking-[1em] mb-6 uppercase">Visual Storyteller</p>
+                <h1 class="text-6xl md:text-9xl font-black serif-font leading-none mb-8">
+                    Sherry <span class="italic text-yellow-400">Vision.</span>
+                </h1>
+                <p class="text-gray-300 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed">
+                    跨越三十年的設計長河，從傳統工藝到數位浪潮。<br>
+                    我用視覺轉化思維，為每一個品牌尋找其獨有的美學靈魂。
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. 時間軸區塊 -->
+        <section id="timeline" class="section-timeline">
+            <div class="max-w-6xl mx-auto px-8 mb-16 text-center" data-aos="fade-up">
+                <h2 class="text-5xl md:text-7xl font-bold serif-font mb-4 text-white">職涯演進</h2>
+                <p class="text-gray-500 tracking-[0.4em] uppercase text-[10px]">The Evolution of a Design Legacy</p>
+            </div>
+
+            <div class="timeline-indicator" id="timelineIndicator">
+                <div class="timeline-progress" id="timelineProgress"></div>
+                <div class="timeline-dot active" data-year="Present" data-index="0"></div>
+                <div class="timeline-dot" data-year="2019" data-index="1"></div>
+                <div class="timeline-dot" data-year="1986" data-index="2"></div>
+                <div class="timeline-dot" data-year="1983" data-index="3"></div>
+                <div class="timeline-dot" data-year="1981" data-index="4"></div>
+            </div>
+
+            <div class="relative group">
+                <div class="nav-btn btn-prev" onclick="moveTimeline(-1)"><i class="fas fa-chevron-left"></i></div>
+                <div class="nav-btn btn-next" onclick="moveTimeline(1)"><i class="fas fa-chevron-right"></i></div>
+
+                <div class="timeline-scroll-container" id="timelineScroll">
+                  
+                    <!-- present -->
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=1200" alt="[1983 巨門時期]">
+                        <div class="item-info">
+                            <div class="item-year">present</div>
+                            <div class="item-company">巨門文具</div>
+                            <p class="item-desc">整合三十年跨領域心法，持續為品牌注入深度價值。</p>
+                        </div>
+                    </div>
+                    <!-- 2019-->
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5db?auto=format&fit=crop&q=80&w=1200" alt="[1986 生活工場時期]">
+                        <div class="item-info">
+                            <div class="item-year">2019</div>
+                            <div class="item-company">卡爾世達</div>
+                            <p class="item-desc">數位轉型領航。將經典邏輯應用於現代 UI/UX。</p>
+                        </div>
+                    </div>
+                    <!-- 1986 -->
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=1200" alt="[2019 卡爾世達時期]">
+                        <div class="item-info">
+                            <div class="item-year">1986</div>
+                            <div class="item-company">生活工場</div>
+                            <p class="item-desc">品牌視覺識別（VI）核心建立者。定義台灣居家美學標竿。</p>
+                        </div>
+                    </div>
+                    <!-- 1983 -->
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=1200" alt="[今日展望]">
+                        <div class="item-info">
+                            <div class="item-year">1983</div>
+                            <div class="item-company">巨門文具</div>
+                            <p class="item-desc">跨足產品開發。負責文具包裝與商品線企劃。</p>
+                        </div>
+                    </div>
+                    <!-- present 1981 -->
+                    <div class="timeline-item">
+                        <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=1200" alt="[1981 華康時期]">
+                        <div class="item-info">
+                            <div class="item-year">1981</div>
+                            <div class="item-company">華康科技</div>
+                            <p class="item-desc">美學的啟蒙。致力於字體排版與精密視覺系統的建構。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 作品集區塊 (卡片式 - 6 張) -->
+        <section id="portfolio" class="py-32 px-8 max-w-[1200px] mx-auto">
+            <div class="mb-16" data-aos="fade-right">
+                <h2 class="text-4xl md:text-6xl font-bold serif-font mb-4">精選作品</h2>
+                <div class="w-16 h-1 bg-yellow-400"></div>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- 作品 1 -->
+                <div class="work-card" onclick="viewProject('禮品開發與企劃', '這是一段詳細的作品描述。探討了如何將創意轉化為市場成功的實體產品...', 'https://images.unsplash.com/photo-1513519245088-0e12902e35a6')" data-aos="fade-up">
+                    <div class="work-thumb">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&q=80&w=600" alt="[作品 1]">
+                    </div>
+                    <div class="work-content">
+                        <h4 class="text-lg font-bold mb-1">禮品開發與企劃</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Concept Design</p>
+                    </div>
+                </div>
+                <!-- 作品 2 -->
+                <div class="work-card" onclick="viewProject('品牌識別系統', '深度分析品牌核心價值，並轉化為完整的視覺規範與排版系統...', 'https://images.unsplash.com/photo-1541462608141-ad4d60e42d76')" data-aos="fade-up" data-aos-delay="100">
+                    <div class="work-thumb">
+                        <img src="https://images.unsplash.com/photo-1541462608141-ad4d60e42d76?auto=format&fit=crop&q=80&w=600" alt="[作品 2]">
+                    </div>
+                    <div class="work-content">
+                        <h4 class="text-lg font-bold mb-1">品牌識別系統</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Branding VI</p>
+                    </div>
+                </div>
+                <!-- 作品 3 -->
+                <div class="work-card" onclick="viewProject('數位官網 UI', '優化使用者流程，將複雜的企業資訊以簡潔有力的數位介面呈現...', 'https://images.unsplash.com/photo-1460925895917-afdab827c52f')" data-aos="fade-up" data-aos-delay="200">
+                    <div class="work-thumb">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" alt="[作品 3]">
+                    </div>
+                    <div class="work-content">
+                        <h4 class="text-lg font-bold mb-1">數位官網 UI</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Digital UI/UX</p>
+                    </div>
+                </div>
+                <!-- 作品 4 -->
+                <div class="work-card" onclick="viewProject('居家生活美學', '引導產品線的視覺氛圍，從材質到色彩定義空間的靈魂感...', 'https://images.unsplash.com/photo-1534349762230-e0cadf78f5db')" data-aos="fade-up" data-aos-delay="300">
+                    <div class="work-thumb">
+                        <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5db?auto=format&fit=crop&q=80&w=600" alt="[作品 4]">
+                    </div>
+                    <div class="work-content">
+                        <h4 class="text-lg font-bold mb-1">居家生活美學</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Interior Visual</p>
+                    </div>
+                </div>
+                <!-- 作品 5 -->
+                <div class="work-card" onclick="viewProject('書籍排版設計', '探索文字與空間的呼吸感，為每一本著作打造專屬的閱讀節奏...', 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c')" data-aos="fade-up" data-aos-delay="400">
+                    <div class="work-thumb">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600" alt="[作品 5]">
+                    </div>
+                    <div class="work-content">
+                        <h4 class="text-lg font-bold mb-1">書籍排版設計</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Editorial Design</p>
+                    </div>
+                </div>
+                <!-- 作品 6 -->
+                <div class="work-card" onclick="viewProject('展場視覺規劃', '從 2D 到 3D 的空間轉化，創造沈浸式的品牌體驗場域...', 'https://images.unsplash.com/photo-1531050171654-a7607f8d762c')" data-aos="fade-up" data-aos-delay="500">
+                    <div class="work-thumb">
+                        <img src="https://images.unsplash.com/photo-1531050171654-a7607f8d762c?auto=format&fit=crop&q=80&w=600" alt="[作品 6]">
+                    </div>
+                    <div class="work-content">
+                        <h4 class="text-lg font-bold mb-1">展場視覺規劃</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Exhibition Design</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 未來展望區塊 -->
+        <section id="future" class="section-future">
+            <div class="max-w-5xl mx-auto px-8 text-white">
+                <div class="future-box" data-aos="zoom-in">
+                    <h2 class="text-4xl md:text-5xl font-bold serif-font mb-8">未來展望 <span class="text-yellow-400">Future.</span></h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
+                        設計不只是風格的堆砌，而是對時代脈動的深刻洞察。未來我將專注於「美學策展」與「品牌基因傳承」。
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 text-xs font-bold tracking-widest">
+                        <span class="px-6 py-2 border border-white/20 rounded-full">美學策展</span>
+                        <span class="px-6 py-2 border border-white/20 rounded-full">品牌諮詢</span>
+                        <button onclick="toggleContactModal(true)" class="px-6 py-2 bg-yellow-400 text-black rounded-full hover:bg-white transition-colors duration-300">聯絡資訊</button>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="mt-32 pt-12 border-t border-white/5 text-center">
+                    <div class="text-[10px] tracking-[0.8em] uppercase text-white/20">
+                        © 2024 Emily Design Archive.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 作品詳情視圖 (模擬跳頁) -->
+    <div id="projectDetailView">
+        <div class="max-w-4xl mx-auto px-8">
+            <button onclick="closeProject()" class="text-yellow-400 mb-12 hover:translate-x-[-10px] transition flex items-center gap-2 font-bold uppercase tracking-widest text-xs">
+                <i class="fas fa-arrow-left"></i> 返回作品列表
+            </button>
+            <div id="projectContent">
+                <!-- 內容動態填充 -->
+                <h2 id="detailTitle" class="text-5xl md:text-7xl font-bold serif-font mb-8"></h2>
+                <img id="detailImg" src="" class="w-full h-[50vh] object-cover rounded-3xl mb-12" alt="[詳情圖片]">
+                <p id="detailDesc" class="text-xl text-gray-400 leading-relaxed max-w-3xl"></p>
+                <div class="mt-20 border-t border-white/10 pt-10">
+                    <h3 class="text-2xl font-bold mb-6">核心成果</h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-4">
+                        <li>視覺系統優化效率提升 40%</li>
+                        <li>品牌識別一致性獲得多方認可</li>
+                        <li>融合經典工藝與現代數位技術</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 聯絡資訊彈窗 (Modal) -->
+    <div id="contactModal" class="fixed inset-0 z-[300] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-[#0a0a0a] border border-white/10 p-6 md:p-8 rounded-3xl max-w-md w-full relative my-auto">
+            <button type="button" onclick="toggleContactModal(false)" class="absolute top-6 right-6 text-white/50 hover:text-white" title="Close contact modal">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <h3 class="text-2xl md:text-3xl font-bold serif-font mb-6 text-yellow-400">聯絡資訊</h3>
+            <div class="space-y-4 md:space-y-6 text-gray-300">
+                <div class="flex items-start md:items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-yellow-400">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-white/30">Email</p>
+                        <a href="mailto:fangline258686@gmail.com" class="text-yellow-400 hover:underline">寫封信給我</a>
+                    </div>
+                </div>
+                <div class="flex items-start md:items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-yellow-400">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-white/30">Phone</p>
+                        <a href="tel:+886960526379">聯絡我</a>
+                    </div>
+                </div>
+                <div class="flex items-start md:items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-yellow-400">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-white/30">Location</p>
+                        <p>Taipei, Taiwan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 flex gap-6">
+                <a href="#" class="text-xl text-white/50 hover:text-yellow-400 transition" aria-label="LINE" title="LINE"><i class="fab fa-line"></i></a>
+                <a href="#" class="text-xl text-white/50 hover:text-yellow-400 transition" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-xl text-white/50 hover:text-yellow-400 transition" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
